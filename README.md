@@ -11,7 +11,7 @@
   <br />
   <br />
 
-  <a href="https://albertbabaiani.github.io/tip-calculator-app/">
+  <a href="https://albertbabaiani.github.io/tip-calculator/">
     <img src="https://img.shields.io/badge/View_Live_Demo-000000?style=for-the-badge&logo=vercel&logoColor=white" alt="View Live Demo" />
   </a>
   
@@ -49,10 +49,7 @@ It demonstrates the use of semantic HTML5, CSS custom properties (variables) for
 <br/>
 
 <div align="center" style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
-  <div>
-    <h3>Tablet View</h3>
-    <img src="./images/previews/tablet-preview.png" alt="Tablet Screenshot" width="400"/>
-  </div>
+
   <div>
     <h3>Mobile View</h3>
     <img src="./images/previews/mobile-preview.png" alt="Mobile Screenshot" height="500"/>
