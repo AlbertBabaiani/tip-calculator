@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tip Calculator</title>
+    <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Google Font -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="./main.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <img src="./images/logo.svg" alt="Logo" />
+    </header>
+
+    <main>
+      <section class="inputs">
+        <div class="input-group bill-input">
+          <label for="bill" class="input-label">Bill</label>
+          <input type="number" id="bill" placeholder="0" min="0" step="0.01" />
+        </div>
+
+        <div class="tip-section">
+          <label class="input-label">Select Tip %</label>
+
+          <div class="tip-grid">
+            <label class="tip-btn">
+              <input type="radio" name="tip" id="tip-5" value="0.05" />
+              5%
+            </label>
+
+            <label class="tip-btn">
+              <input type="radio" name="tip" id="tip-10" value="0.10" />
+              10%
+            </label>
+
+            <label class="tip-btn">
+              <input type="radio" name="tip" id="tip-15" value="0.15" />
+              15%
+            </label>
+
+            <label class="tip-btn">
+              <input type="radio" name="tip" id="tip-25" value="0.25" />
+              25%
+            </label>
+
+            <label class="tip-btn">
+              <input type="radio" name="tip" id="tip-50" value="0.50" />
+              50%
+            </label>
+
+            <input
+              type="number"
+              id="custom-tip"
+              placeholder="Custom"
+              min="0"
+              max="100"
+              step="5"
+            />
+          </div>
+        </div>
+
+        <div class="input-group people-input">
+          <label for="people" class="input-label">Number of People</label>
+          <input type="number" id="people" placeholder="0" min="0" step="1" />
+        </div>
+      </section>
+
+      <section class="result">
+        <div class="results-wrapper">
+          <div class="result-row">
+            <div class="result-label">
+              <h2>Tip Amount</h2>
+              <p>/ person</p>
+            </div>
+
+            <p class="tip-amount">$<span id="tip-amount">0.00</span></p>
+          </div>
+
+          <div class="result-row">
+            <div class="result-label">
+              <h2>Total</h2>
+              <p>/ person</p>
+            </div>
+
+            <p class="tip-amount">$<span id="total-amount">0.00</span></p>
+          </div>
+        </div>
+
+        <button type="button" class="reset-btn" disabled>RESET</button>
+      </section>
+    </main>
+  </body>
+</html>

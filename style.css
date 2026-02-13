@@ -1,0 +1,212 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --body-bg-color: #c5e4e7;
+  --primary-color: #00474b;
+  --primary-light-color: #26c2ae;
+  --input-body: #f3f9fa;
+  --label-color: #5e7a7d;
+  --label-secondary-color: #7f9d9f;
+  --btn-disabled: #0d686d;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Space Mono", monospace;
+}
+
+body {
+  background-color: var(--body-bg-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+header {
+  padding-block: 5rem 4rem;
+}
+
+main {
+  width: 100%;
+  max-width: 60rem;
+  background-color: #fff;
+  padding: 3.2rem;
+  border-top-left-radius: 2.5rem;
+  border-top-right-radius: 2.5rem;
+  box-shadow: 0 32px 43px 0 rgba(79, 166, 175, 0.2);
+}
+
+.input-label {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--label-color);
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 3.2rem;
+}
+.input-group.bill-input input {
+  background-image: url(./images/icon-dollar.svg);
+}
+.input-group.people-input input {
+  background-image: url(./images/icon-person.svg);
+}
+
+input[type=number] {
+  padding: 1rem 1.75rem 1rem 3.2rem;
+  width: 100%;
+  border-radius: 0.5rem;
+  background-color: var(--input-body);
+  border: none;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: right;
+  color: var(--primary-color);
+  background-repeat: no-repeat;
+  background-position: left 1.76rem center;
+}
+input[type=number]:focus-visible {
+  outline: 2px solid var(--primary-light-color);
+}
+
+.tip-grid {
+  margin-block: 1rem 3.2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.6rem;
+}
+
+.tip-btn {
+  border-radius: 0.5rem;
+  background-color: var(--primary-color);
+  padding-block: 0.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.4rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.tip-btn input {
+  display: none;
+}
+.tip-btn:hover, .tip-btn.active {
+  background-color: var(--primary-light-color);
+  color: var(--primary-color);
+}
+
+#custom-tip {
+  padding-left: 0;
+}
+
+.result {
+  width: 100%;
+  background-color: var(--primary-color);
+  padding: 4rem 2rem 2rem;
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 3.2rem;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.3rem;
+}
+
+.result-label h2 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #fff;
+}
+.result-label p {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: var(--label-secondary-color);
+}
+
+.tip-amount {
+  font-size: 3.2rem;
+  font-weight: bold;
+  letter-spacing: -0.67px;
+  text-align: right;
+  color: var(--primary-light-color);
+}
+
+.reset-btn {
+  border-radius: 0.5rem;
+  background-color: var(--primary-light-color);
+  padding-block: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  color: var(--primary-color);
+  transition: all 0.3s;
+}
+.reset-btn:disabled {
+  background-color: var(--btn-disabled);
+  color: var(--primary-color);
+  cursor: not-allowed;
+}
+
+@media (min-width: 1440px) {
+  header {
+    padding: 0;
+    padding-bottom: 8.8rem;
+  }
+  main {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 4.8rem;
+    max-width: 92rem;
+    border-radius: 2.5rem;
+    padding-left: 4.8rem;
+  }
+  .tip-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .people-input {
+    margin: 0;
+  }
+  .result {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 5.6rem 4rem 4rem;
+  }
+  .result-row {
+    margin-bottom: 5.3rem;
+  }
+  .tip-amount {
+    font-size: 4.8rem;
+  }
+}/*# sourceMappingURL=style.css.map */
